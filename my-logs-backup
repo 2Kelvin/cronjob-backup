@@ -1,0 +1,6 @@
+# run everyday at 11:59 PM
+# root runs backup-tool installed in /usr/local/bin and passes /var/log as the folder arg to compress and backup
+# always include an empty line at the end, just some cron quirks
+# file permissions should be '-rw-r--r-- 1' (only owned by root), otherwise cron won't run it for security reasons
+# no dots in filename, like file extension names like .sh, cron doesn't like that, it'll ignore the file
+59 23 * * * root backup-tool /var/log

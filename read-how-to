@@ -1,0 +1,9 @@
+System wide cron job for backing up logs
+
+1. Git clone this project and follow installation and usage section for its use
+git clone https://github.com/2Kelvin/backup-logs-tool.git
+
+2. In /etc/cron.d, add the cronjob file to schedule the backup script 
+e.g sudo vim my-logs-backup
+
+3. see my-logs-backup file for system wide cronjob syntax
