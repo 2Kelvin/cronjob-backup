@@ -48,6 +48,3 @@ To ensure `cron` picks up and executes this file, you must adhere to these stric
 | **Permissions** | Must be **644** (`-rw-r--r--`). `cron` will skip the file if it is group-writable for security. |
 | **Ownership** | The file **must** be owned by `root`. |
 | **Trailing Newline** | The file must end with a **blank line** to be considered valid by the parser. |
-
-> [!IMPORTANT]
-> If you create the file and nothing happens at 11:59 PM, check `/var/log/syslog` for "ORPHANED" or "BAD FILE MODE" errors related to your filename.
