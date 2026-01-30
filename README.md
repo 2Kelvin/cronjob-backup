@@ -1,6 +1,6 @@
 # Backup Logs Cronjob
 
-A system-wide cron configuration to automate log backups every night. This job triggers the `backup-tool` to compress and archive `/var/log` content.
+A system-wide cronjob to automate log backups every night at 11:59PM. This job triggers the `backup-tool` to compress and archive `/var/log` content.
 
 ## 🛠 Configuration Details
 
@@ -16,9 +16,9 @@ The cronjob is designed with the following specifications:
 First, ensure you have the core backup utility installed on your system:
 
 ```bash
-git clone [https://github.com/2Kelvin/backup-logs-tool.git](https://github.com/2Kelvin/backup-logs-tool.git)
+git clone https://github.com/2Kelvin/backup-logs-tool.git
 cd backup-logs-tool
-# Follow the installation instructions in that repository
+# Follow the installation instructions in that repository from the README
 ```
 
 ### 2. Configure the Cronjob
@@ -31,12 +31,12 @@ sudo vim /etc/cron.d/backup-logs
 ### 3. Add the Schedule
 Paste the following line into the file. 
 
-Note: You must include an empty line at the very end of the file. Without this trailing newline, cron may fail to process the job.
-
 ```bash
 # /etc/cron.d/backup-logs: run everyday at 11:59 PM
 59 23 * * * root backup-tool /var/log
 ```
+
+**Note:** You must include an empty line at the very end of the file. Without this trailing newline, cron may fail to process the job.
 
 ## ⚠️ Important Requirements
 
