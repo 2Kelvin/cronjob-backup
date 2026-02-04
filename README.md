@@ -48,3 +48,11 @@ To ensure `cron` picks up and executes this file, you must adhere to these stric
 | **Permissions** | Must be **644** (`-rw-r--r--`). `cron` will skip the file if it is group-writable for security. |
 | **Ownership** | The file **must** be owned by `root`. |
 | **Trailing Newline** | The file must end with a **blank line** to be considered valid by the parser. |
+
+## Deleting the Cronjob
+```bash
+# navigate into /etc/cron.d
+cd /etc/cron.d 
+# delete the cronjob file
+sudo rm backup-logs
+```
